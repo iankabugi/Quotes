@@ -8,17 +8,17 @@ import {Quotes} from '../quotes';
 })
 export class QuoteComponent implements OnInit {
  quotes = [
-    new Quotes(1,'You can shoot a bird intentional but the bird cant poop on you intentionally','BUGi',new Date(2018,3,14)),
-    new Quotes(2,'You cant hide from your weakness','mike',new Date(2018,6,9)),
-    new Quotes(3,'The brave also have fears','Clark',new Date(2018,1,12) ),
+    new Quotes(1,'You can shoot a bird intentional but the bird cant poop on you intentionally',
+    new Quotes(2,'You cant hide from your weakness'),
+    new Quotes(3,'The brave also have fears'),
 
   ]
- addNewQuotes(quote){
-  let quoteLength=this.quotes.length;
-  quote.id=quoteLength+1;
-  this.quotes.push(quote);
+  @Input() quote: Quote;
+   plusQuote(quote){
+     let quoteLength = this.quotes.length;
+     this.quotes.push(quote);
    }
- 
+
   constructor() { }
 
   ngOnInit() {

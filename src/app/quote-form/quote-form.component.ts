@@ -1,21 +1,27 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {Quotes} from '../quotes';
+import { Component, OnInit,Output,EventEmitter} from '@angular/core';
+import{Quote} from '../quote';
 
 @Component({
- selector: 'app-quote-form',
- templateUrl: './quote-form.component.html',
- styleUrls: ['./quote-form.component.css']
+  selector: 'app-quotes-form',
+  templateUrl: './quotes-form.component.html',
+  styleUrls: ['./quotes-form.component.css']
 })
 export class QuotesFormComponent implements OnInit {
-newQuotes=new Quotes(0,"","",new Date());
-@Output() addQuotes=new EventEmitter<Quotes>();
+  public hide:boolean= false;
+   showForm(){
+     this.hide = !this.hide;
+   }
+   newQuote = new Quote(0,'','',new Date());
 
- submitQuotes(){
-     this.addQuotes.emit(this.newQuotes);
+ @Output() addQuote= new EventEmitter <Quote> ();
+ submitQuote (){
+    this.addQuote.emit(this.newQuote);
  }
-constructor() { }
 
-ngOnInit() {
-}
+
+  constructor() { }
+
+  ngOnInit() {
+  }
 
 }
