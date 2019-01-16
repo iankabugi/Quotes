@@ -1,10 +1,13 @@
-<div class="container">
-  <h1>QUOTES</h1>
+<h1>QUOTES</h1>
+
     <div class="wells">
       <h3>This is an online platform where you get post your post.
-      A quote a day,keeps the lazy brain cells away</h3>
+      A quote a day,keeps the lazy brain cells away.</h3>
     </div>
-    <div class="row">
-      <app-quote-form (addQuote)="addNewQuote($event)"></app-Quote-form>
-    </div>
-</div>
+
+  <!-- <app-quote-form (addQuotes) = "addNewQuote($event)"></app-quote-form> -->
+
+      <div class="content">
+        <app-quotes-form></app-quotes-form>
+        <app-quote-details > </app-quote-details>
+      </div>

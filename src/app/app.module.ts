@@ -8,11 +8,17 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuotesFormComponent } from './quote-form/quote-form.component';
+import { QuoteComponent } from './quote/quote.component';
+import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
  declarations: [
    AppComponent,
    QuotesFormComponent,
+   QuoteComponent,
+   QuoteDetailsComponent,
+   HighlightDirective
    ],
 
  imports: [

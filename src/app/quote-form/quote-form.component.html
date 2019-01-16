@@ -9,12 +9,12 @@
 <div class="form-group">
 
 <label for="Quote">Quote</label>
-<textarea class="form-control" id="Quote" rows="3" [(ngModel)]="newQuotes.name" name="Quote" placeholder="Quote" #Quote="ngModel" width="350" required></textarea>
+<textarea class="form-control" id="Quote" rows="3" [(ngModel)]="newQuotes.quote" name="Quote" placeholder="Quote" #Quote="ngModel" width="350" required></textarea>
 <div [hidden]="Quote.valid || Quote.pristine" class="alert alert-danger">
 <p> A quote is required!</p>
 </div>
 </div>
-          {{newQuotes.name}}
+                {{newQuotes.quote}}
           <div class="form-group" class="wells">
               <label for="Author">Author</label>
               <input type="text" class="form-control" id="Author" [(ngModel)]="newQuotes.author" name="Author" placeholder="Author" #Author="ngModel" required ><hr>
@@ -26,7 +26,7 @@
 
 <div class="form-group">
     <label for="Date">Date</label>
-    <input type='date' id="Date" [(ngModel)]="newQuotes.date" name="Date" #Date="ngModel" placeholder="mm/dd/yy" required>
+    <input type='date' id="Date" [(ngModel)]="newQuotes.datess" name="Date" #Date="ngModel" placeholder="mm/dd/yy" required>
     <div [hidden]="Date.valid || Date.pristine" class="alert alert-danger">
         <p>Date is Required</p>
 

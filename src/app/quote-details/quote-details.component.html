@@ -1,0 +1,20 @@
+<div *ngFor='let quote of quotes,let i = index'>
+   <ul>
+     <li>
+       <p>{{quote.name}}</p>
+       <p >Author : {{quote.description}}</p>
+       <p> Date : {{quote.date | date}}</p>
+        <br><br>
+
+     <div class="vote">
+       <button class="btn-primary"(click)="upVote()" name="button">Like {{addVote}}</button>
+       <button class = "btn-primary"(click)="downVote()"
+      name="button">UnLike {{reduceVote}}</button>
+     </div>
+     <br>
+     <button class="btn-danger" (delete) = 'quoteDelete(true)'> Delete Quote </button></li>
+   </ul>
+
+  </div>
+  </body>
+</html>
